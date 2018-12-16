@@ -1,0 +1,44 @@
+:root {
+  --battery-level: 0;
+  --battery-charging: 0;
+  --battery-level-low: 20;
+}
+
+body::before {
+  counter-reset: battery-level var(--battery-level) battery-charging var(--battery-charging);
+  content: "";
+}
+
+.battery {
+  position: relative;
+  width: 5rem;
+  height: 2.5rem;
+  margin: 20px auto;
+  border-radius: 0.3rem;
+  border: 0.1rem solid white;
+  transition: 300ms;
+  background-image: linear-gradient(to right, rgba(0, 255, 0, calc(var(--battery-charging))) calc(var(--battery-level)*1%), rgba(0, 0, 0, 0) calc(var(--battery-level)*1%)), linear-gradient(to right, rgb(calc( 255 * var(--battery-level) + 0 * (var(--battery-level) - var(--battery-level-low)) ), calc( 0 * var(--battery-level) + 255 * (var(--battery-level) - var(--battery-level-low)) ), calc( 0 * var(--battery-level) + 255 * (var(--battery-level) - var(--battery-level-low)) )) calc(var(--battery-level)*1%), rgba(0, 0, 0, 0) calc(var(--battery-level)*1%));
+  background-repeat: no-repeat;
+}
+.battery::after {
+  content: '';
+  display: block;
+  width: 0.4rem;
+  position: absolute;
+  right: -0.6rem;
+  top: 0.3rem;
+  bottom: 0.3rem;
+  border-radius: 0 0.2rem 0.2rem 0;
+  border: 0.1rem solid white;
+}
+.battery::before {
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  content: counter(battery-level) "%";
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: -1rem;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+}

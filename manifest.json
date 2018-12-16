@@ -1,0 +1,15 @@
+{
+  "name": "Gimbal",
+  "description": "Control Zhiyun based gimbals",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "landscape",
+  "icons": [
+    {
+        "src": "gimbal_icon_192.png",
+        "sizes": "192x192 144x144 64x64 32x32 24x24 16x16",
+        "type": "image/png"
+    }
+  ]
+}

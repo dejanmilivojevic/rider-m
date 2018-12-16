@@ -1,0 +1,82 @@
+<html>
+  <head>
+      <title>GIMBAL</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+
+      <!-- <meta name="mobile-web-app-capable" content="yes">
+           <meta name="apple-mobile-web-app-capable" content="yes">
+           <meta name="application-name" content="Gimbal">
+           <meta name="apple-mobile-web-app-title" content="Gimbal">
+           <meta name="theme-color" content="#000000">
+           <meta name="msapplication-navbutton-color" content="#000000">
+           <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+           <meta name="msapplication-starturl" content="/">
+           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+           <link rel="icon" type="image/png" sizes="192x192 144x144 64x64 32x32 24x24 16x16" href="gimbal_icon_192.png">
+           <link rel="apple-touch-icon" type="image/png" sizes="192x192 144x144 64x64 32x32 24x24 16x16" href="gimbal_icon_192.png"> -->
+
+      <link rel="manifest" href="manifest.json">
+      <link rel="stylesheet" href="dpad.css"/>
+      <link rel="stylesheet" href="button.css"/>
+      <link rel="stylesheet" href="battery.css"/>
+  </head>
+  <body>
+      <style>
+       html, body {margin: 0; height: 100%; overflow: hidden}
+       .pos-data {
+           color: #FFFFFF;
+           margin-top: 10px;
+       }
+       #connectButton {
+           position: absolute;
+           left: 5%;
+           top: 5%;
+           width: 105px;
+           height: 38px;
+       }
+      </style>
+      <div class="container">
+          <div class="data-group">
+              <div class="battery"></div>
+              <div class="pos-data">Pitch: <span id="pitch-value">0</span></div>
+              <div class="pos-data">Roll: <span id="roll-value">0</span></div>
+              <div class="pos-data">Pan: <span id="pan-value">0</span></div>
+          </div>
+          <div class="middle-group">
+              <div class="middle-group-square">
+                  <div id="reset" class="horisontal button-80"><div class="button-text">Reset</div></div>
+                  <div id="reverse" class="horisontal button-80"><div class="button-text">Reverse</div></div>
+                  <div id="follow" class="button-80"><div class="button-text">Follow</div></div>
+                  <div id="lock" class="button-80"><div class="button-text">Lock</div></div>
+                  <div id="full" class="button-80"><div class="button-text">Full</div></div>
+              </div>
+          </div>
+          <div id="dpad1">
+              <div>
+                  <div class="dpad-arrow dpad-arrow-up"></div>
+                  <div class="dpad-arrow dpad-arrow-down"></div>
+                  <div class="dpad-arrow dpad-arrow-left"></div>
+                  <div class="dpad-arrow dpad-arrow-right"></div>
+              </div>
+          </div>
+
+          <div id="dpad2">
+              <div>
+                  <div class="dpad-arrow dpad-arrow-up"></div>
+                  <div class="dpad-arrow dpad-arrow-down"></div>
+                  <div class="dpad-arrow dpad-arrow-left"></div>
+                  <div class="dpad-arrow dpad-arrow-right"></div>
+              </div>
+          </div>
+      </div>
+
+      <button id="connectButton">Connect</button>
+
+      <script src="offline-manager.js"></script>
+      <script src="dpad.js"></script>
+      <script src="button.js"></script>
+      <script src="ui.js"></script>
+      <script src="browser.js"></script>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+body {
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.container {
+    position: relative;
+    background-color: #3b3b3b;
+    text-align: center;
+    font-family: sans-serif;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    max-height: 100%;
+}
+
+.button-80 {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 50%;
+    margin-left: -25%;
+    font-size: 16px;
+}
+
+.button-80 .button-text {
+    margin-top: -0.6em;
+}
+
+.data-group {
+    position: absolute;
+    /* height: 50%; */
+    /* width: 20%; */
+    left: 46%;
+    top: 5%;
+}
+
+.middle-group {
+    position: absolute;
+    height: 50%;
+    width: 20%;
+    left: 40%;
+    bottom: -27%;
+}
+
+.middle-group-square {
+    position: absolute;
+    height: 0%;
+    width: 100%;
+    padding-bottom: 100%;
+    left: 0px;
+    top: 0px;
+}
+
+#follow {
+    bottom: 55%;
+    left: 115%;
+}
+
+#lock {
+    bottom: 55%;
+}
+
+#full {
+    bottom: 55%;
+    left: -15%;
+}
+
+#reset {
+    left: -15%;
+}
+
+#reverse {
+    left: 115%;
+}
+
+.horisontal {
+    bottom: 110%;
+}
+
+#dpad1 {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    top: 0px;
+    left: 3%;
+}
+
+#dpad2 {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    top: 0px;
+    right: 3%;
+}
+
+
+.dpad-relative-container, .dpad-absolute-container {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.dpad-relative, .dpad-absolute {
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.dpad-relative-container {
+  background-image: url('dpad-background.png');
+}
+
+.dpad-relative {
+  background-image: url('dpad-relative.png');
+}
+
+.dpad-absolute-container {
+  background-image: url('dpad-absolute.png');
+}
+
+.dpad-arrow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  display: none;
+}
+
+.dpad-arrow-active {
+  display: block;
+}
+
+/* Relative arrows */
+.dpad-relative .dpad-arrow-down {
+  background-image: url('dpad-arrow-down.png');
+}
+
+.dpad-relative .dpad-arrow-left {
+  background-image: url('dpad-arrow-left.png');
+}
+
+.dpad-relative .dpad-arrow-right {
+  background-image: url('dpad-arrow-right.png');
+}
+
+.dpad-relative .dpad-arrow-up {
+  background-image: url('dpad-arrow-up.png');
+}
+
+/* Absolute arrows */
+.dpad-absolute .dpad-arrow-active {
+  background-size: 100% auto;
+}
+
+.dpad-absolute .dpad-arrow-up {
+  background-image: url('dpad-absolute-up.png');
+}
+
+.dpad-absolute .dpad-arrow-down {
+  background-image: url('dpad-absolute-down.png');
+}
+
+.dpad-absolute .dpad-arrow-left {
+  background-image: url('dpad-absolute-left.png');
+}
+
+.dpad-absolute .dpad-arrow-right {
+  background-image: url('dpad-absolute-right.png');
+}
+
+.dpad-instructions {
+  color: white;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  width: 100%;
+  margin-top: -0.5em;
+  text-align: center;
+}
+
+.dpad-active .dpad-instructions {
+  color: #ccf400;
+}
