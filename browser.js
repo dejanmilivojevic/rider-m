@@ -201,7 +201,7 @@ async function connect() {
       // filters: [{
       //   name: 'Rider-MDB8C'
       //   }],
-      //acceptAllDevices: true, 
+      acceptAllDevices: true, 
       optionalServices: ['0000fee9-0000-1000-8000-00805f9b34fb']
     });
 
