@@ -68,7 +68,6 @@
       'dpad-relative.png', // 04e80247418e473c8c62bbcf3f192fd2f24bd5fa
       'dpad.css', // cdce1a6eb3faa8a7d40d5b70a1ef8df9258d25b6
       'dpad.js', // a4460099c1110a40e8fb68cc34a036dd995755c7
-      'gauge.min.js', // 51d4cba8fa07eb05b9dd8981aa79e13286cd8d60
       'gimbal_icon_192.png', // 237503ac6faf1265fbe307cbd2d82f3a080a3a13
       'index.html', // 5000ebaf98032580731dc1e3a0e95740fc7440d3
       'ui.js', // 453c37ece7b4d79a2b7fd155e331c13eb55865f3
