@@ -2,7 +2,7 @@
   "name": "Gimbal",
   "description": "Control Zhiyun based gimbals",
   "lang": "en-US",
-  "scope": "/rider-m",
+  "scope": "/rider-m/",
   "start_url": "/index.html",
   "display": "standalone",
   "orientation": "landscape",
