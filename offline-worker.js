@@ -46,9 +46,6 @@
     RESOURCES: [
       'battery.css', // b911ab6b3d1a5bf03228540e163eaa9e814f85be
       'browser.js', // 7f4f888a80a34a34f740590d1cf45e630e0dc775
-      'btsnoop_hci_down.log', // 528c2e03e4331260a61ddda128ffba47ba56001e
-      'btsnoop_hci_read.log', // ccc3cce70815b086e90a8e2aff0a764c8a70ab30
-      'btsnoop_hci_up.log', // 59f23c58a42d28d2e2a2cabd916e2e25436473cb
       'button-150-300-active.png', // 15d5f5fcc8da84c10fd5c0b6fec600d439aa4525
       'button-150-300.png', // 02e38151dbb78048a4c129f9d878091b61b38996
       'button-300-150.png', // a7dd4e5b94fe1ab69c06a72225f9be169187f654
@@ -74,10 +71,7 @@
       'gauge.min.js', // 51d4cba8fa07eb05b9dd8981aa79e13286cd8d60
       'gimbal_icon_192.png', // 237503ac6faf1265fbe307cbd2d82f3a080a3a13
       'index.html', // 5000ebaf98032580731dc1e3a0e95740fc7440d3
-      'index.js', // 6d9a52454d977621c54ebdd1883e825e1cf3cbb7
-      'offline-manager.js', // e2e09e000c5b64035940ae44e9c0936eb25ecd51
       'ui.js', // 453c37ece7b4d79a2b7fd155e331c13eb55865f3
-
     ],
 
     // Adds the resources to the cache controlled by this worker.
