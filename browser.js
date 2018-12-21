@@ -14,10 +14,10 @@ class CrcCheck {
 }
 
 class CmdData {
-    constructor(x, y, z) {
+    constructor(x, cmd, val) {
         this.cmdData = [0, 0, 0, 0, 0, 0, 0];
 
-        const bArr = [(6 | 0), (((y >> 8) | x) | 0), (y | 0), ((z >> 8) | 0), (z | 0)];
+        const bArr = [(6 | 0), (((cmd >> 8) | x) | 0), (cmd | 0), ((val >> 8) | 0), (val | 0)];
         const crc = CrcCheck.calcChecksum(bArr);
         this.cmdData[0] = bArr[0];
         this.cmdData[1] = bArr[1];
@@ -49,7 +49,9 @@ var moveDirection = {
     up: false,
     down: false,
     left: false,
-    right: false
+    right: false,
+    rollLeft: false,
+    rollRight: false
 };
 
 document.getElementById('connectButton').addEventListener('click', function(event) {
@@ -97,7 +99,7 @@ function timerLoop(sendCmdToDevice) {
         i++;
 
         if (i === 10) {
-            cmdDataArr.push(new CmdData(1, 6, 0));
+            cmdDataArr.push(new CmdData(1, 39, 0));
         }
         if (i === 15) {
             cmdDataArr.push(new CmdData(1, 34, 0));
@@ -109,6 +111,7 @@ function timerLoop(sendCmdToDevice) {
 
         if (i == 25) {
             i = 0;
+            cmdDataArr.push(new CmdData(1, 6, 0));
         }
 
         if (moveDirection.up) {
@@ -122,6 +125,14 @@ function timerLoop(sendCmdToDevice) {
         }
         if (moveDirection.right) {
             cmdDataArr.push(new CmdData(0, 4098, 3717));
+        }
+
+        if (moveDirection.rollLeft) {
+            cmdDataArr.push(new CmdData(0, 4099, 378));
+        }
+
+        if (moveDirection.rollRight) {
+            cmdDataArr.push(new CmdData(0, 4099, 3717));
         }
 
 
@@ -183,14 +194,14 @@ function handleNotifications(event) {
         if (s != 0) {
             if (s != 1) {
                 if (s == 2) {
-                    console.log('full mode');
+                    setMode('full');
                     break;
                 }
             }
-            console.log('lock mode');
+            setMode('lock');
             break;
         }
-        console.log('follow mode');
+        setMode('follow');
         break;
         break;
     }
@@ -218,6 +229,10 @@ async function connect() {
 
     notifyCharacteristic.addEventListener('characteristicvaluechanged',
                                       handleNotifications);
+
+    cmdDataArr.push(new CmdData(1, 2, 0));
+    cmdDataArr.push(new CmdData(1, 4, 0));
+    cmdDataArr.push(new CmdData(1, 6, 0));
 
     setInterval(
         timerLoop(
